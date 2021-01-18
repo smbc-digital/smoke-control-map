@@ -1,6 +1,6 @@
 //import Leaflet from 'leaflet'
-import { greenbeltStyle, aqmaStyle, smokecontrolareaStyle } from './Styles'
-import { greenbeltPopup, aqmaPopup, smokecontrolareaPopup} from './Popups' 
+import {smokecontrolareaStyle } from './Styles'
+import {smokecontrolareaPopup } from './Popups' 
 
 
 const Configuration = {
@@ -24,30 +24,6 @@ const Configuration = {
                 maxZoom: 2,
                 style: smokecontrolareaStyle,
                 onEachFeature: smokecontrolareaPopup
-            },
-            displayOverlay: true,
-            visibleByDefault: true
-        },
-        
-        {
-            key: 'Green Belt',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:green_belt_os&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            layerOptions: {
-                maxZoom: 2,
-                style: greenbeltStyle,
-                onEachFeature: greenbeltPopup
-            },
-            displayOverlay: true,
-            visibleByDefault: true
-        },
-
-        {
-            key: 'Air Quality Management Areas',
-            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=climatology:air_quality_management_areas&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
-            layerOptions: {
-                maxZoom: 2,
-                style: aqmaStyle,
-                onEachFeature: aqmaPopup
             },
             displayOverlay: true,
             visibleByDefault: true
